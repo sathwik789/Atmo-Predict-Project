@@ -32,7 +32,7 @@ Make sure you have Python and pip installed.
 
 2. Clone the Repository
 
-git clone https://github.com/<your-username>/atmo-predict-app.git
+git clone https://github.com/sathwik789/Atmo-Predict-Project.git
 cd atmo-predict-app
 
 3. Install Dependencies
