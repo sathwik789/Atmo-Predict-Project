@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Prediction Model Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .model-card { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+<h1>Weather Prediction Model Comparison</h1>
+
+<h2>Model Accuracy</h2>
+<img src="{{ acc_plot_path }}" alt="Accuracy Plot">
+
+<h2>Detailed Results</h2>
+{% for name, data in results.items() %}
+<div class="model-card">
+    <h3>{{ name }}</h3>
+    <p><strong>Accuracy:</strong> {{ data.accuracy }}%</p>
+    <pre>{{ data.report }}</pre>
+</div>
+{% endfor %}
+
+<h2>Algorithm Explanations</h2>
+{% for name, desc in algo_info.items() %}
+<h3>{{ name }}</h3>
+<p>{{ desc }}</p>
+{% endfor %}
+
+<h2>Real-life Applications</h2>
+<ul>
+{% for app in applications %}
+    <li>{{ app }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
